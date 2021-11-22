@@ -29,25 +29,34 @@ router.get('/new', (req, res) => {
 });
 
 router.post('/', validateCampground, catchAsync(async (req, res, next) => {
-    req.flash('success', 'Successfully created new Campground!!!')
     //if (!req.body.campground) throw new ExpressError('Incomplete Campground Data', 400);
     const campground = new Campground(req.body.campground);
     await campground.save();
+    req.flash('success', 'Successfully created new Campground!!!')
     res.redirect(`/campgrounds/${campground._id}`);
 }))
 
 router.get('/:id', catchAsync(async (req, res, next) => {
     const campground = await Campground.findById(req.params.id).populate('reviews');
+    if (!campground) {
+        req.flash('error', 'Cannot find this campground');
+        res.redirect('/campgrounds')
+    }
     res.render('campgrounds/show', { campground });
 }));
 
 router.get('/:id/edit', catchAsync(async (req, res) => {
     const campground = await Campground.findById(req.params.id);
+    if (!campground) {
+        req.flash('error', 'Cannot find this campground to edit');
+        res.redirect('/campgrounds')
+    }
     res.render('campgrounds/edit', { campground });
 }));
 
 router.put('/:id', validateCampground, catchAsync(async (req, res) => {
     const campground = await Campground.findByIdAndUpdate(req.params.id, { ...req.body.campground }, { useFindAndModify: false });
+    req.flash('success', 'Successfully updated the camp')
     res.redirect(`/campgrounds/${campground._id}`);
 }))
 
