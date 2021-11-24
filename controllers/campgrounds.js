@@ -13,7 +13,10 @@ module.exports.createCampground = async (req, res, next) => {
     //if (!req.body.campground) throw new ExpressError('Incomplete Campground Data', 400);
     const campground = new Campground(req.body.campground);
     campground.author = req.user._id;
+    campground.images = req.files.map(f => ({ url: f.path, filename: f.filename }));
     await campground.save();
+    console.log(campground);
+    console.log(campground.images);
     req.flash('success', 'Successfully created new Campground!!!')
     res.redirect(`/campgrounds/${campground._id}`);
 }
@@ -24,7 +27,7 @@ module.exports.showCampground = async (req, res, next) => {
         populate: {
             path: 'author'
         }
-    }).populate('author');
+    }).populate('author').populate('images');
     if (!campground) {
         req.flash('error', 'Cannot find this campground');
         res.redirect('/campgrounds')
