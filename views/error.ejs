@@ -5,7 +5,9 @@
             <%= err.message %>
         </h4>
         <p>
-            <%= err.stack %>
+            <% if (process.env.NODE_ENV=="production" ) { %>
+                <%= err.stack %>
+                    <% } %>
         </p>
         <hr>
         <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
