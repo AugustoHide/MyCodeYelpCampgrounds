@@ -33,6 +33,7 @@ Falta correção de pequenos bugs, como corrigir formatação em algums páginas
 	Após, foram feitos diversos componentes reutilizáveis que ficaram dentro da pasta views/partials.
 	Para ajudar na integração de javascript com HTML usou-se EJS.
 </p>
+
 ### Back-end
 <p>
 	O começo do projeto foi feito tudo somente o arquivo app.js. 
