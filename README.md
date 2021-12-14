@@ -3,6 +3,10 @@
 <p>
   É um site de compartilhamento de acampamentos, onde os usuários podem se cadastrar e compartilhar e dar reviews dos acampamentos que foram ou conhecem.
 </p>
+
+## Status de desenvolvimento
 <h4 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
+	🚧  MyCodeYelpCamp Pronto para uso...  🚧
 </h4>
+Falta correção de pequenos bugs, como corrigir formatação em algums páginas.
+
