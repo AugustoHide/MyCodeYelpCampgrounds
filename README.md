@@ -19,3 +19,6 @@ Falta correção de pequenos bugs, como corrigir formatação em algums páginas
 	https://mycodeyelpcamp.herokuapp.com/
 </h4>
 </p>
+
+
+## Layout
