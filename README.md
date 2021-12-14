@@ -22,3 +22,7 @@ Falta correção de pequenos bugs, como corrigir formatação em algums páginas
 
 
 ## Layout
+<p>
+	<img src="./campgrounds.png">
+</p>
+	
