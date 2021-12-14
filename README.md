@@ -40,3 +40,14 @@ Falta correção de pequenos bugs, como corrigir formatação em algums páginas
 	Conforme se adicionava funcionalidades, mais rotas e páginas foram criadas e precisou dividir o código em arquivos diferentes.
 	O controle das rotas ficaram nos arquivos dentro da pasta /routes. E o controle das ações e controles ficaram nos arquivos dentro da pasta /controlers.
 </p>
+
+## Funcionalidades
+<ul>
+	<li>Registro de usuário</li>
+	<li>Login e logout</li>
+	<li>Adição de reviews em acampamentos</li>
+	<li>Remoção dos reviews dados</li>
+	<li>Cadastro de acampamentos</li>
+	<li>Edição das informações dos acampamentos cadastrados</li>
+	<li>Remoção dos acampamentos cadastrados</li>
+	</ul>
