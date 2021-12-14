@@ -8,5 +8,6 @@
 <h4 align="center"> 
 	🚧  MyCodeYelpCamp Pronto para uso...  🚧
 </h4>
+<p>
 Falta correção de pequenos bugs, como corrigir formatação em algums páginas.
-
+</p>
