@@ -1,7 +1,7 @@
 body{
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://images.unsplash.com/photo-1471115853179-bb1d604434e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url('../images/homeBackground.jpg');
     background-size: cover;
     background-position: center;
     text-shadow: 0 0.1rem 0.1rem rgba(0,0,0,0.5);
@@ -33,4 +33,13 @@ body{
     color:#333;
     text-shadow: none;
     font-weight: 700;
+}
+
+.header{
+    opacity: 0.7;
+    padding: 1.5% 10%;
+}
+
+main{
+    padding-top: 32.5%;
 }
